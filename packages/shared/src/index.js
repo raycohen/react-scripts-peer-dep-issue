@@ -13,10 +13,13 @@ export default class ExampleComponent extends Component {
       text
     } = this.props
 
+    const time = moment.tz("2018-10-01 3:00", "America/New_York");
+
     return (
       <div className={styles.test}>
         Example Component: {text}
-        {moment.tz("2018-10-01 3:00", "America/New_York")}
+        <br/>
+        {time.toString()}
       </div>
     )
   }
